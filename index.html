@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Uhuru Capital | Bitcoin for Our Community</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #f9d342;
+      --secondary: #1e1e1e;
+      --accent: #2e86de;
+      --background: #0f0f0f;
+      --card-bg: #191919;
+      --text: #ffffff;
+      --muted: #cccccc;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: var(--background);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    header {
+      background: var(--secondary);
+      padding: 30px 20px 20px;
+      text-align: center;
+      border-bottom: 2px solid var(--primary);
+    }
+
+    header img.logo {
+      max-width: 160px;
+      margin-bottom: 10px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.4em;
+      color: var(--primary);
+    }
+
+    .slogan {
+      text-align: center;
+      font-size: 1.2em;
+      margin-top: 8px;
+      color: var(--muted);
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 15px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: var(--primary);
+    }
+
+    section {
+      padding: 50px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    h2 {
+      color: var(--primary);
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+
+    .bitcoin-chart iframe {
+      width: 100%;
+      height: 420px;
+      border: none;
+      border-radius: 8px;
+    }
+
+    .grid {
+      display: grid;
+      gap: 30px;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
+
+    .card {
+      background: var(--card-bg);
+      padding: 25px;
+      border-radius: 12px;
+      border: 1px solid #333;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 20px rgba(255, 255, 255, 0.1);
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    input, textarea, select, button {
+      width: 100%;
+      margin-top: 10px;
+      padding: 12px;
+      border-radius: 6px;
+      border: none;
+      font-size: 1em;
+    }
+
+    input, textarea, select {
+      background: #2a2a2a;
+      color: var(--text);
+    }
+
+    button {
+      background: var(--primary);
+      color: #000;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background: #ffe97f;
+    }
+
+    .form-group {
+      margin-bottom: 18px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: var(--secondary);
+      border-top: 2px solid var(--primary);
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="uhuru_capital_logo_glow.png" alt="Uhuru Capital Logo" class="logo">
+    <h1>Uhuru Capital</h1>
+    <p class="slogan">Financial Freedom Begins With Knowledge</p>
+    <nav>
+      <a href="#dashboard">Dashboard</a>
+      <a href="#game">Uhuru Game</a>
+      <a href="#flashcards">Flashcards</a>
+      <a href="#education">Education</a>
+      <a href="#merch">Merch</a>
+      <a href="#signup">Join Us</a>
+    </nav>
+  </header>
+
+  <section id="dashboard">
+    <h2>Why Should We Invest in Bitcoin?</h2>
+    <p>Click the logo below to watch the Uhuru Capital introduction video and discover why Bitcoin matters.</p>
+    <img src="uhuru_capital_logo_glow.png" id="uhuruTrigger" style="cursor: pointer; width: 220px; display: block; margin: 0 auto;" alt="Play Uhuru Capital Intro">
+    <div id="uhuruVideo" style="display:none; margin-top: 20px;">
+      <video width="100%" height="auto" controls autoplay>
+        <source src="Uhuru-Capital-Financial-Freedom.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    <script>
+      document.getElementById("uhuruTrigger").onclick = function() {
+        document.getElementById("uhuruVideo").style.display = "block";
+        window.scrollTo({ top: document.getElementById("uhuruVideo").offsetTop, behavior: 'smooth' });
+      };
+    </script>
+  </section>
+
+  <section id="merch">
+    <h2>Uhuru Merch</h2>
+    <p>Support our mission through Uhuru Capital merchandise. Every item you purchase helps fund our Bitcoin education programs for underserved communities around the world. All proceeds are reinvested into Bitcoin to power the Uhuru ecosystem.</p>
+    <div class="grid">
+      <div class="card">
+        <h3>Featured Drop of the Month</h3>
+        <p><strong>“Uhuru Roots” Limited-Edition Black & Gold Tee</strong></p>
+        <p>This premium tee features the glowing Uhuru Capital tree with our slogan on the back. Stylish, symbolic, and powerful — every purchase supports global Bitcoin education.</p>
+        <button onclick="document.getElementById('rewardForm').scrollIntoView({behavior:'smooth'})">Donate & Get Yours</button>
+      </div>
+      <div class="card">
+        <h3>Bitcoin Notebooks</h3>
+        <p>Custom designs with the Uhuru Capital tree. Document your financial journey.</p>
+      </div>
+      <div class="card">
+        <h3>Uhuru Hats & Hoodies</h3>
+        <p>Embroidered designs for everyday inspiration. Your purchase is your investment.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="rewardForm">
+    <h2>Claim Your Reward</h2>
+    <p>Complete the form to receive your limited-edition Uhuru Merch. All entries help us tailor your experience and empower your journey with Bitcoin.</p>
+    <form>
+      <div class="form-group">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="interest">What interests you most about Bitcoin?</label>
+        <select id="interest" name="interest">
+          <option value="">Select one</option>
+          <option value="learning">Learning about Bitcoin</option>
+          <option value="investing">Investing in Bitcoin</option>
+          <option value="freedom">Gaining financial freedom</option>
+          <option value="teaching">Teaching others about it</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <button type="submit">Submit & Claim</button>
+      </div>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Uhuru Capital. All rights reserved. Open source under the <a href="https://opensource.org/licenses/MIT" target="_blank">MIT License</a>. All merch proceeds help fund free education and Bitcoin reinvestment for global empowerment.</p>
+  </footer>
+</body>
+</html>
